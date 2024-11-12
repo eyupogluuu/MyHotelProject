@@ -24,6 +24,15 @@ builder.Services.AddScoped<ISubscribeDal, EFSubscribeDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IRoomDal, EFRoomDal>();
 
+builder.Services.AddCors(opt=>
+    {
+        opt.AddPolicy("MyHotelApi", opt =>
+        {
+            opt.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        });
+
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -37,7 +46,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("MyHotelApi");
 app.UseAuthorization();
 
 app.MapControllers();

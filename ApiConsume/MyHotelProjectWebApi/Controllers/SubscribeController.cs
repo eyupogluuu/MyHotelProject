@@ -31,7 +31,7 @@ namespace MyHotelProjectWebApi.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteSubscribe(int id)
         {
             var sil = subscribeService.TGetByID(id);

@@ -30,7 +30,7 @@ namespace MyHotelProjectWebApi.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteStuff(int id)
         {
             var sil = stuffService.TGetByID(id);

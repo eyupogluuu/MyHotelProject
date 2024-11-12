@@ -1,0 +1,81 @@
+﻿@model AddStuffViewModel
+@{
+    ViewData["Title"] = "AddStuff";
+    Layout = "~/Views/adminLayout/Index.cshtml";
+}
+
+<style>
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #f1f1f1;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .form-container label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #4a4a4a;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container input[type="text"] {
+            font-size: 14px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+            .form-container input[type="text"]:focus {
+                outline: none;
+                border-color: #4a90e2;
+                box-shadow: 0px 0px 5px rgba(74, 144, 226, 0.3);
+            }
+
+        .form-container button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 8px;
+            background-color: #4a4a4a;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .form-container button:hover {
+                background-color: #333;
+            }
+</style>
+
+<div class="form-container">
+    <form method="post">
+        <label>Personel Adı Soyadı</label>
+        <input type="text" asp-for="nameSurname" class="form-control" />
+
+        <label>Personel Ünvan</label>
+        <input type="text" asp-for="tittle" class="form-control" />
+
+        <label>Twitter</label>
+        <input type="text" asp-for="sm1" class="form-control" />
+
+        <label>Instagram</label>
+        <input type="text" asp-for="sm2" class="form-control" />
+
+        <label>LinkedIn</label>
+        <input type="text" asp-for="sm3" class="form-control" />
+
+        <label>Görsel</label>
+        <input type="text" asp-for="imageUrl" class="form-control" />
+
+        <button type="submit" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</button>
+    </form>
+</div>

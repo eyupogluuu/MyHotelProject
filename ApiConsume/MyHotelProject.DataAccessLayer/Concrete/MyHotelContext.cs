@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MyHotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyHotelProject.DataAccessLayer.Concrete
 {
-    public class MyHotelContext : DbContext
+    public class MyHotelContext : IdentityDbContext<AppUser, AppRole ,int >
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -125,6 +125,40 @@ namespace MyHotelProject.DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("MyHotelProject.EntityLayer.Concrete.About", b =>
+                {
+                    b.Property<int>("aboutId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("aboutId"), 1L, 1);
+
+                    b.Property<string>("content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("customerCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("roomCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("staffCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("title1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("title2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("aboutId");
+
+                    b.ToTable("Abouts");
+                });
+
             modelBuilder.Entity("MyHotelProject.EntityLayer.Concrete.AppRole", b =>
                 {
                     b.Property<int>("Id")
@@ -211,7 +245,6 @@ namespace MyHotelProject.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("city")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("name")

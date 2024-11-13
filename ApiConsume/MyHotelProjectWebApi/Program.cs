@@ -24,6 +24,9 @@ builder.Services.AddScoped<ISubscribeDal, EFSubscribeDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IRoomDal, EFRoomDal>();
 
+builder.Services.AddScoped<IAboutService, AboutManager>();
+builder.Services.AddScoped<IAboutDal, EFAboutDal>();
+
 
 builder.Services.AddCors(opt=>
     {

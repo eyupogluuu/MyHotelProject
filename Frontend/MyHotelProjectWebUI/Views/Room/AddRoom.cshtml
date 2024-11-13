@@ -1,8 +1,9 @@
-﻿@model UpdateStuffViewModel
+﻿@model AddRoomVieewModel
 @{
-    ViewData["Title"] = "UpdateStuff";
+    ViewData["Title"] = "AddRoom";
     Layout = "~/Views/adminLayout/Index.cshtml";
 }
+
 <style>
     .form-container {
         max-width: 400px;
@@ -57,25 +58,29 @@
 
 <div class="form-container">
     <form method="post">
-        <input type="hidden" asp-for="stuffId" />
-        <label>Personel Adı Soyadı</label>
-        <input type="text" asp-for="nameSurname" class="form-control" />
+        <label>Oda Numarası</label>
+        <input type="text" asp-for="roomNumber" class="form-control" />
 
-        <label>Personel Ünvan</label>
+        <label>Oda Tipi</label>
         <input type="text" asp-for="tittle" class="form-control" />
 
-        <label>Twitter</label>
-        <input type="text" asp-for="sm1" class="form-control" />
+        <label>Fiyat</label>
+        <input type="text" asp-for="price" class="form-control" />
 
-        <label>Instagram</label>
-        <input type="text" asp-for="sm2" class="form-control" />
+        <label>Yatak sayısı</label>
+        <input type="text" asp-for="bedCount" class="form-control" />
 
-        <label>LinkedIn</label>
-        <input type="text" asp-for="sm3" class="form-control" />
+        <label>Banyo Sayısı</label>
+        <input type="text" asp-for="bathCount" class="form-control" />
 
-        <label>Görsel</label>
-        <input type="text" asp-for="imageUrl" class="form-control" />
+        <label>Wifi</label>
+        <input type="text" asp-for="wifi" class="form-control" />
 
-        <button type="submit" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</button>
+        <label>Açıklama</label>
+        <input type="text" asp-for="descreption" class="form-control" />
+
+        <button type="submit" class="btn mb-1 btn-rounded btn-outline-dark">Kaydet</button>
     </form>
 </div>
+
+

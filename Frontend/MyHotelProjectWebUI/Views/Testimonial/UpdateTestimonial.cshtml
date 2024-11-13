@@ -1,8 +1,9 @@
-﻿@model UpdateStuffViewModel
+﻿@model UpdateTestimonialViewModel
 @{
-    ViewData["Title"] = "UpdateStuff";
+    ViewData["Title"] = "UpdateTestimonial";
     Layout = "~/Views/adminLayout/Index.cshtml";
 }
+
 <style>
     .form-container {
         max-width: 400px;
@@ -57,7 +58,7 @@
 
 <div class="form-container">
     <form method="post">
-        <input type="hidden" asp-for="stuffId" />
+        <input type="hidden" asp-for="testimonialId" />
         <label>Personel Adı Soyadı</label>
         <input type="text" asp-for="nameSurname" class="form-control" />
 
@@ -65,13 +66,7 @@
         <input type="text" asp-for="tittle" class="form-control" />
 
         <label>Twitter</label>
-        <input type="text" asp-for="sm1" class="form-control" />
-
-        <label>Instagram</label>
-        <input type="text" asp-for="sm2" class="form-control" />
-
-        <label>LinkedIn</label>
-        <input type="text" asp-for="sm3" class="form-control" />
+        <input type="text" asp-for="comment" class="form-control" />
 
         <label>Görsel</label>
         <input type="text" asp-for="imageUrl" class="form-control" />
@@ -79,3 +74,4 @@
         <button type="submit" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</button>
     </form>
 </div>
+

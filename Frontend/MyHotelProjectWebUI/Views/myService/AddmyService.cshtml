@@ -1,8 +1,9 @@
-﻿@model UpdateStuffViewModel
+﻿@model AddmyServiceViewModel
 @{
-    ViewData["Title"] = "UpdateStuff";
+    ViewData["Title"] = "AddmyService";
     Layout = "~/Views/adminLayout/Index.cshtml";
 }
+
 <style>
     .form-container {
         max-width: 400px;
@@ -57,25 +58,17 @@
 
 <div class="form-container">
     <form method="post">
-        <input type="hidden" asp-for="stuffId" />
-        <label>Personel Adı Soyadı</label>
-        <input type="text" asp-for="nameSurname" class="form-control" />
-
-        <label>Personel Ünvan</label>
+        <label>Hizmet Adı</label>
         <input type="text" asp-for="tittle" class="form-control" />
 
-        <label>Twitter</label>
-        <input type="text" asp-for="sm1" class="form-control" />
+        <label>İcon</label>
+        <input type="text" asp-for="icon" class="form-control" />
 
-        <label>Instagram</label>
-        <input type="text" asp-for="sm2" class="form-control" />
+        <label>Açıklaması</label>
+        <input type="text" asp-for="descreption" class="form-control" />
 
-        <label>LinkedIn</label>
-        <input type="text" asp-for="sm3" class="form-control" />
-
-        <label>Görsel</label>
-        <input type="text" asp-for="imageUrl" class="form-control" />
-
-        <button type="submit" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</button>
+        <button type="submit" class="btn mb-1 btn-rounded btn-outline-dark">Kaydet</button>
     </form>
 </div>
+
+

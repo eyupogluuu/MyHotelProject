@@ -1,0 +1,72 @@
+﻿@model List<ListmyServiceViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/adminLayout/Index.cshtml";
+}
+
+<style>
+
+    .table-container {
+        max-width: 80%;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+        background-color: #fafafa;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f5f7;
+        color: #333;
+        font-weight: 500;
+    }
+
+    tr:hover {
+        background-color: #f9f9f9;
+    }
+
+</style>
+
+<div class="table-container">
+
+    <table class="table table-bordered">
+        <tr>
+
+            <th>Hizmet</th>
+            <th>İcon</th>
+            <th>Açıklama</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.tittle</td>
+                <td>@item.icon</td>
+                <td>@item.descreption</td>
+                <td><a class="btn mb-1 btn-rounded btn-outline-danger" href="/myService/DeletemyService/@item.myServiceId">Sil</a></td>
+                <td><a class="btn mb-1 btn-rounded btn-outline-success" href="/myService/UpdatemyService/@item.myServiceId">Güncelle</a></td>
+
+            </tr>
+        }
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a class="btn mb-1 btn-rounded btn-outline-dark" href="/myService/AddmyService/">Yeni Hizmet Ekle</a>
+    </div>
+</div>
+
+

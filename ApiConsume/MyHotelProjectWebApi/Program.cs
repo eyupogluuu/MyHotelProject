@@ -24,6 +24,7 @@ builder.Services.AddScoped<ISubscribeDal, EFSubscribeDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IRoomDal, EFRoomDal>();
 
+
 builder.Services.AddCors(opt=>
     {
         opt.AddPolicy("MyHotelApi", opt =>

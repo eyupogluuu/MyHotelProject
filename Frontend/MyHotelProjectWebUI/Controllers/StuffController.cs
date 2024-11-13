@@ -47,7 +47,7 @@ namespace MyHotelProjectWebUI.Controllers
         public async Task<IActionResult> DeleteStuff(int id)
         {
             var client = httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"http://localhost:5226/api/Stuff?id={id}");
+            var responseMessage = await client.DeleteAsync($"http://localhost:5226/api/Stuff/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

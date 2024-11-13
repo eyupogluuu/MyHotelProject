@@ -1,0 +1,71 @@
+﻿@model List<TestimonialListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/adminLayout/Index.cshtml";
+}
+
+<style>
+
+    .table-container {
+        max-width: 80%;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+        background-color: #fafafa;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f5f7;
+        color: #333;
+        font-weight: 500;
+    }
+
+    tr:hover {
+        background-color: #f9f9f9;
+    }
+
+</style>
+
+<div class="table-container">
+
+    <table class="table table-bordered">
+        <tr>
+
+            <th>Referans</th>
+            <th>Ünvan</th>
+            <th>Yorumu</th>
+            <th>Görsel</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.nameSurname</td>
+                <td>@item.tittle</td>
+                <td>@item.comment</td>
+                <td>@item.imageUrl</td>
+                <td><a class="btn mb-1 btn-rounded btn-outline-danger" href="/Testimonial/DeleteTestimonial/@item.testimonialId">Sil</a></td>
+                <td><a class="btn mb-1 btn-rounded btn-outline-success" href="/Testimonial/UpdateTestimonial/@item.testimonialId">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a class="btn mb-1 btn-rounded btn-outline-dark" href="/Testimonial/AddTestimonial/">Yeni Referans Ekle</a>
+    </div>
+</div>

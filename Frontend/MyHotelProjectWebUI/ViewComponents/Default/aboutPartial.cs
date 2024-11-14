@@ -13,10 +13,10 @@ namespace MyHotelProjectWebUI.ViewComponents.Default
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task< IViewComponentResult> Invoke()
+        public async Task< IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://localhost:5226/api/About");
+            var responseMessage = await client.GetAsync("http://localhost:59549/api/About");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

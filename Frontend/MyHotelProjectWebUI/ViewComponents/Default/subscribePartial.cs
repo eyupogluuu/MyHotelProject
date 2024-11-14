@@ -6,6 +6,7 @@ namespace MyHotelProjectWebUI.ViewComponents.Default
     {
         public IViewComponentResult Invoke()
         {
+
             return View();
         }
     }

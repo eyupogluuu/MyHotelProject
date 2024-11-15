@@ -27,6 +27,9 @@ builder.Services.AddScoped<IRoomDal, EFRoomDal>();
 builder.Services.AddScoped<IAboutService, AboutManager>();
 builder.Services.AddScoped<IAboutDal, EFAboutDal>();
 
+builder.Services.AddScoped<IBookingService, BookingManager>();
+builder.Services.AddScoped<IBookingDal, EFBookingDal>();
+
 
 builder.Services.AddCors(opt=>
     {

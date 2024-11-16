@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyHotelProject.DataAccessLayer.Concrete;
 
@@ -11,9 +12,10 @@ using MyHotelProject.DataAccessLayer.Concrete;
 namespace MyHotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(MyHotelContext))]
-    partial class MyHotelContextModelSnapshot : ModelSnapshot
+    [Migration("20241115203240_mig_add_guest")]
+    partial class mig_add_guest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -322,38 +324,6 @@ namespace MyHotelProject.DataAccessLayer.Migrations
                     b.HasKey("bookingID");
 
                     b.ToTable("Bookings");
-                });
-
-            modelBuilder.Entity("MyHotelProject.EntityLayer.Concrete.Contact", b =>
-                {
-                    b.Property<int>("contactID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("contactID"), 1L, 1);
-
-                    b.Property<string>("ConMessage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("mail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("subject")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("contactID");
-
-                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("MyHotelProject.EntityLayer.Concrete.Guest", b =>

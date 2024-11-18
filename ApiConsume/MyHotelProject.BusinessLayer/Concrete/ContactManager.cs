@@ -20,17 +20,17 @@ namespace MyHotelProject.BusinessLayer.Concrete
 
         public void TDelete(Contact t)
         {
-            throw new NotImplementedException();
+           contactDal.Delete(t);
         }
 
         public List<Contact> TGetAll()
         {
-            throw new NotImplementedException();
+           return contactDal.GetAll();
         }
 
         public Contact TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return contactDal.GetByID(id);
         }
 
         public void TInsert(Contact t)
@@ -40,7 +40,7 @@ namespace MyHotelProject.BusinessLayer.Concrete
 
         public void TUpdate(Contact t)
         {
-            throw new NotImplementedException();
+            contactDal.Update(t);
         }
     }
 }

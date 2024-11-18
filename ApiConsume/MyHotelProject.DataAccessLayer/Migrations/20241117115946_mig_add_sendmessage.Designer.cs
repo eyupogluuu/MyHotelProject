@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyHotelProject.DataAccessLayer.Concrete;
 
@@ -11,9 +12,10 @@ using MyHotelProject.DataAccessLayer.Concrete;
 namespace MyHotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(MyHotelContext))]
-    partial class MyHotelContextModelSnapshot : ModelSnapshot
+    [Migration("20241117115946_mig_add_sendmessage")]
+    partial class mig_add_sendmessage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

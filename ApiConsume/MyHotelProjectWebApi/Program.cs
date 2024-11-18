@@ -36,6 +36,9 @@ builder.Services.AddScoped<IContactDal, EFContactDal>();
 builder.Services.AddScoped<IGuestService, GuestManager>();
 builder.Services.AddScoped<IGuestDal, EFGuestDal>();
 
+builder.Services.AddScoped<ISendMessageService, SendMessageManager>();
+builder.Services.AddScoped<ISendMessageDal, EFSendMessageDal>();
+
 builder.Services.AddCors(opt=>
     {
         opt.AddPolicy("MyHotelApi", opt =>

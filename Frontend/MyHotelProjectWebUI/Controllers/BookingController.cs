@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyHotelProjectWebUI.Models.Booking;
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -6,6 +7,7 @@ using System.Text;
 
 namespace MyHotelProjectWebUI.Controllers
 {
+    [AllowAnonymous]
     public class BookingController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="Mapping\" />
+    <Folder Include="images\" />
   </ItemGroup>
 
 </Project>

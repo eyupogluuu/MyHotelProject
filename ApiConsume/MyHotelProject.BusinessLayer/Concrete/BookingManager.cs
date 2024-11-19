@@ -18,6 +18,11 @@ namespace MyHotelProject.BusinessLayer.Concrete
         {
             this.bookingDal = bookingDal;
         }
+        public List<Booking> TLast6Bookings()
+        {
+            return bookingDal.Last6Bookings();
+        }
+
 
         public void TBookingStatusChangeApproved(Booking booking)
         {
@@ -32,6 +37,11 @@ namespace MyHotelProject.BusinessLayer.Concrete
         public List<Booking> TGetAll()
         {
             return bookingDal.GetAll();
+        }
+
+        public int TGetBookingCount()
+        {
+           return  bookingDal.GetBookingCount();
         }
 
         public Booking TGetByID(int id)

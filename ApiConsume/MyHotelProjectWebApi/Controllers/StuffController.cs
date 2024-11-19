@@ -51,5 +51,11 @@ namespace MyHotelProjectWebApi.Controllers
             var value=stuffService.TGetByID(id);
             return Ok(value);
         }
+        [HttpGet("Last4Staff")]
+        public IActionResult Last4Staff()
+        {
+            var values = stuffService.TLast4Staff();
+            return Ok(values);
+        }
     }
 }

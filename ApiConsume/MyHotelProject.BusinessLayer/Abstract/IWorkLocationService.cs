@@ -5,11 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyHotelProject.DataAccessLayer.Abstract
+namespace MyHotelProject.BusinessLayer.Abstract
 {
-    public interface ISendMessageDal:IGenericDal<SendMessage>
+    public interface IWorkLocationService:IGenericService<WorkLocation>
     {
-        public int GetSendMessageCount();
     }
 }
-

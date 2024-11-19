@@ -1,5 +1,6 @@
 ﻿using MyHotelProject.BusinessLayer.Abstract;
 using MyHotelProject.DataAccessLayer.Abstract;
+using MyHotelProject.DataAccessLayer.EntityFramework;
 using MyHotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,10 @@ namespace MyHotelProject.BusinessLayer.Concrete
         public void TUpdate(Contact t)
         {
             contactDal.Update(t);
+        }
+        public int TGetContactCount()
+        {
+            return contactDal.GetContactCount();
         }
     }
 }

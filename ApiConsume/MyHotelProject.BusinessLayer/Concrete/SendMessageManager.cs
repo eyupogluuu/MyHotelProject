@@ -4,6 +4,7 @@ using MyHotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,6 +32,11 @@ namespace MyHotelProject.BusinessLayer.Concrete
         public SendMessage TGetByID(int id)
         {
             return sendMessageDal.GetByID(id);
+        }
+
+        public int TGetSendMessageCount()
+        {
+           return sendMessageDal.GetSendMessageCount();
         }
 
         public void TInsert(SendMessage t)

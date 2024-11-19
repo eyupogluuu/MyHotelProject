@@ -10,16 +10,11 @@ using System.Threading.Tasks;
 
 namespace MyHotelProject.DataAccessLayer.EntityFramework
 {
-    public class EFContactDal:GenericRepository<Contact>,IContactDal
+    public class EFWorkLocationDal:GenericRepository<WorkLocation>,IWorkLocationDal
     {
-        public EFContactDal(MyHotelContext context) : base(context)
+        public EFWorkLocationDal(MyHotelContext context) : base(context)
         {
 
-        }
-        public int GetContactCount()
-        {
-            var context = new MyHotelContext();
-            return context.Contacts.Count();
         }
     }
 }

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace MyHotelProject.BusinessLayer.Abstract
 {
-    public interface ISendMessageService:IGenericService<SendMessage>
+    public interface ISendMessageService : IGenericService<SendMessage>
     {
-    }
+        public int TGetSendMessageCount();
+        }
 }

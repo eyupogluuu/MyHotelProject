@@ -17,5 +17,6 @@ namespace MyHotelProjectWebUI.Models.AppUser
         [Required(ErrorMessage = "Bu Alan Boş Geçilemez")]
         [Compare("password",ErrorMessage ="Şifreler Uyuşmuyor")]
         public string confirmPassword { get; set; }
-    }
+       
+    } 
 }

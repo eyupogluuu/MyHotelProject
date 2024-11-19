@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyHotelProject.DataAccessLayer.Concrete;
 
@@ -11,9 +12,10 @@ using MyHotelProject.DataAccessLayer.Concrete;
 namespace MyHotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(MyHotelContext))]
-    partial class MyHotelContextModelSnapshot : ModelSnapshot
+    [Migration("20241118183218_mig_add_worklocation")]
+    partial class mig_add_worklocation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -248,9 +250,11 @@ namespace MyHotelProject.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("country")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("gender")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("imagUrl")
@@ -265,6 +269,7 @@ namespace MyHotelProject.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("workDepartment")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("workLocationID")

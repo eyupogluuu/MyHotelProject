@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace MyHotelProject.BusinessLayer.Abstract
 {
-    public interface IContactService:IGenericService<Contact>
+    public interface IAppUserService:IGenericService<AppUser>
     {
-        public int TGetContactCount();
+        List<AppUser> TUserListWithWorkLocation();
+        List<AppUser> TUsersListWithWorkLocations();
+        int TAppUserCount();
     }
 }

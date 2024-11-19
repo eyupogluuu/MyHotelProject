@@ -39,16 +39,25 @@ builder.Services.AddScoped<IGuestDal, EFGuestDal>();
 builder.Services.AddScoped<ISendMessageService, SendMessageManager>();
 builder.Services.AddScoped<ISendMessageDal, EFSendMessageDal>();
 
-builder.Services.AddCors(opt=>
+builder.Services.AddScoped<IWorkLocationService, WorkLocationManager>();
+builder.Services.AddScoped<IWorkLocationDal, EFWorkLocationDal>();
+
+builder.Services.AddScoped<IAppUserService, AppUserManager>();
+builder.Services.AddScoped<IAppUserDal, EFAppUserDal>();
+
+
+
+builder.Services.AddCors(opt =>
     {
         opt.AddPolicy("MyHotelApi", opt =>
         {
             opt.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
         });
 
-});
+    });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+           options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

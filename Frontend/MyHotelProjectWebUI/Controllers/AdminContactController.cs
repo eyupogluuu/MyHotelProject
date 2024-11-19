@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyHotelProjectWebUI.Models.Contact;
 using MyHotelProjectWebUI.Models.SendMessage;
 using Newtonsoft.Json;
@@ -6,6 +7,7 @@ using System.Text;
 
 namespace MyHotelProjectWebUI.Controllers
 {
+  
     public class AdminContactController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyHotelProject.DataAccessLayer.Abstract
 {
-    public interface ISendMessageDal:IGenericDal<SendMessage>
+    public interface IWorkLocationDal:IGenericDal<WorkLocation>
     {
-        public int GetSendMessageCount();
     }
 }
-

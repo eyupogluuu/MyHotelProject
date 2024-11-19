@@ -3,18 +3,18 @@ ASP.NET Core 6 ve Code First İle Api Kullanılarak geliştirilmiş aynı zamand
 <br>
 
 **Kullanılan Teknolojiler:**<br>
-ASP.NET Core API: RESTful API geliştirme ve kullanımı.
-ASP.NET Identity: Kimlik doğrulama ve yetkilendirme.
-Swagger: API belgeleri oluşturma.
-Postman: API test etme.
-Rapid API: API'leri hızlı keşfetme ve kullanma.
-JSON Web Token (JWT): Güvenli oturum yönetimi.
-Fluent Validation: Veri doğrulama.
-N Katmanlı Mimari: Katmanlı mimari tasarımı.
-DTO (Data Transfer Object) Katmanı: Veri transfer nesneleri kullanımı.
-MVC (Model-View-Controller): API tüketimi ve kullanıcı arayüzü geliştirme.
-Entity Framework Core: ORM ile veritabanı işlemleri.
-Repository Design Pattern: Veri erişim stratejileri.
+ASP.NET Core API: RESTful API geliştirme ve kullanımı.<br>
+ASP.NET Identity: Kimlik doğrulama ve yetkilendirme.<br>
+Swagger: API belgeleri oluşturma.<br>
+Postman: API test etme.<br>
+Rapid API: API'leri hızlı keşfetme ve kullanma.<br>
+JSON Web Token (JWT): Güvenli oturum yönetimi.<br>
+Fluent Validation: Veri doğrulama.<br>
+N Katmanlı Mimari: Katmanlı mimari tasarımı.<br>
+DTO (Data Transfer Object) Katmanı: Veri transfer nesneleri kullanımı.<br>
+MVC (Model-View-Controller): API tüketimi ve kullanıcı arayüzü geliştirme.<br>
+Entity Framework Core: ORM ile veritabanı işlemleri.<br>
+Repository Design Pattern: Veri erişim stratejileri.<br>
 Mail Gönderme İşlemleri: E-posta entegrasyonu.
 
 **Ekran Resimleri:**<br>
